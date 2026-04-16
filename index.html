@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Weather App</h1>
+
+    <input type="text" id="inputCity" placeholder="Enter city">
+    <button onclick="searchWeather()">Search</button>
+    <button onclick="getLocation()">Use Current Location</button>
+
+    <select id="recentCities" onchange="selectCity()">
+        <option value="">Recent Searches</option>
+    </select>
+
+    <h2 id="city"></h2>
+    <h3 id="temp"></h3>
+    <p id="desc"></p>
+
+    <div id="forecast"></div>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="popup-msg"></span>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
